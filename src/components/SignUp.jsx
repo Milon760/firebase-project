@@ -40,11 +40,9 @@ const SignUp = () => {
             });
             closeModal();
         } catch (err) {
-            console.error(err);
-            setErrorMsg(err.message);
             Swal.fire({
                 title: "Failed",
-                text: "Sign Up Failed",
+                text: err.message,
                 icon: "error",
             });
         }

@@ -25,10 +25,9 @@ const SignIn = () => {
             });
             closeModal();
         } catch (error) {
-            console.error(error);
             Swal.fire({
                 title: "Failed",
-                text: "Sign In Failed",
+                text: error.message,
                 icon: "error",
             });
         }
@@ -44,10 +43,9 @@ const SignIn = () => {
             });
             closeModal();
         } catch (err) {
-            console.error(err);
             Swal.fire({
                 title: "Failed",
-                text: "Sign In Failed",
+                text: err.message,
                 icon: "error"
             });
         }
