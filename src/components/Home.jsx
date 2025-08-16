@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold mb-6 text-gray-800 text-center"> Welcome to my web site. </h1>
+      <h1 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800 text-center animate-bounce"> Welcome to my web site 🚀 </h1>
 
       {userData ? (
         <div className="text-center">
@@ -24,10 +24,10 @@ const Home = () => {
       ) : (
         <div className="space-x-4">
           <button onClick={() => setModalType('login')} className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-all duration-200">
-           Sign In
+            Sign In
           </button>
           <button onClick={() => setModalType('signup')} className="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-lg transition-all duration-200">
-           Sign Up
+            Sign Up
           </button>
         </div>
       )}
@@ -39,4 +39,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default Home;

@@ -20,15 +20,15 @@ const SignIn = () => {
             await signInEmailAndPassword(email, pass);
             Swal.fire({
                 title: "Success",
-                text: "Successfully Sign In ",
+                text: "Successfully Signed In ",
                 icon: "success",
             });
             closeModal();
         } catch (error) {
             console.error(error);
             Swal.fire({
-                title: "failed",
-                text: "Sign Up Failed",
+                title: "Failed",
+                text: "Sign In Failed",
                 icon: "error",
             });
         }
@@ -39,15 +39,15 @@ const SignIn = () => {
             await signInGoogleHandle();
             Swal.fire({
                 title: " Success",
-                text: " Successfully Sign In ",
+                text: " Successfully Signed In ",
                 icon: "success"
             });
             closeModal();
         } catch (err) {
             console.error(err);
             Swal.fire({
-                title: "failed",
-                text: "Sign Up Failed",
+                title: "Failed",
+                text: "Sign In Failed",
                 icon: "error"
             });
         }
@@ -85,7 +85,7 @@ const SignIn = () => {
                             }
                         </div>
                     </div>
-                    <p className='text-right text-blue-600 hover:underline cursor-pointer'> Forget Password? </p>
+                    <p className='text-right text-blue-600 hover:underline cursor-pointer'> Forgot Password? </p>
                     <button
                         type='submit'
                         className='bg-blue-600 w-full p-2 rounded-lg text-white font-medium text-lg hover:bg-blue-700 transition-all duration-200'>
@@ -105,7 +105,7 @@ const SignIn = () => {
                     </div>
                 </form>
                 <p className='text-center text-gray-500 mt-5 font-serif'>
-                    Don't have an acount? <a onClick={() => setModalType('signup')} className='text-blue-600 font-medium px-2 hover:underline cursor-pointer'> Sign Up &rarr;</a>
+                    Don't have an account? <a onClick={() => setModalType('signup')} className='text-blue-600 font-medium px-2 hover:underline cursor-pointer'> Sign Up &rarr;</a>
                 </p>
             </div>
         </div>
